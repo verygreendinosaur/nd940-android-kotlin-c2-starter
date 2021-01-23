@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 
 class AsteroidRadarApplication: Application() {
 
-    val applicationScope = CoroutineScope(Dispatchers.Default)
+    private val applicationScope = CoroutineScope(Dispatchers.Default)
 
     override fun onCreate() {
         super.onCreate()
@@ -26,7 +26,6 @@ class AsteroidRadarApplication: Application() {
 
         val constraints = Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.UNMETERED)
-                .setRequiresBatteryNotLow(true)
                 .setRequiresCharging(true)
                 .apply {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

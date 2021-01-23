@@ -8,9 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.domain.Asteroid
 import com.udacity.asteroidradar.api.NasaImageApi
-import com.udacity.asteroidradar.api.getCurrentDate
 import com.udacity.asteroidradar.database.AsteroidDatabaseDao
-import com.udacity.asteroidradar.domain.PictureOfDay
 import com.udacity.asteroidradar.repository.AsteroidsRepository
 
 import kotlinx.coroutines.launch
