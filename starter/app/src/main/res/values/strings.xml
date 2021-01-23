@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Asteroid Radar</string>
-
+    <string name="general_network_error">Oops! We\'re having trouble talking to our server, so you may see some out of date asteroid data. We\'ll try again later.</string>
     <string name="next_week_asteroids">View week asteroids</string>
     <string name="today_asteroids">View today asteroids</string>
     <string name="saved_asteroids">View saved asteroids</string>

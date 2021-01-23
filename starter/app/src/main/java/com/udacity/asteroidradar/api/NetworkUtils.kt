@@ -1,11 +1,21 @@
 package com.udacity.asteroidradar.api
 
-import com.udacity.asteroidradar.Asteroid
-import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.domain.Asteroid
+import com.udacity.asteroidradar.util.Constants
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+
+fun getCurrentDate(): String {
+    val simpleFormat = SimpleDateFormat(Constants.API_QUERY_DATE_FORMAT)
+    return simpleFormat.format(Date())
+}
+
+fun getSevenDaysFromCurrentDate(): String {
+    val nextSevenDays = getNextSevenDaysFormattedDates()
+    return nextSevenDays.last()
+}
 
 fun parseAsteroidsJsonResult(jsonResult: JSONObject): ArrayList<Asteroid> {
     val nearEarthObjectsJson = jsonResult.getJSONObject("near_earth_objects")
