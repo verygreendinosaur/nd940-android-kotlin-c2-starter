@@ -15,4 +15,4 @@
 # gradle
 gradle/
 gradlew*
-starter/gradle.properties
+gradle.properties
